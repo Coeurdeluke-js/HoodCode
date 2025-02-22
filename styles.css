@@ -133,6 +133,7 @@
     justify-content: center;
     align-items: center;
     height: 100vh; /* Altura completa de la pantalla */
+    background: url('hero/hero.jpg') no-repeat center center/cover; /* Imagen de fondo */
     color: #fafafa; /* Texto blanco */
     text-align: center;
     overflow: hidden;
