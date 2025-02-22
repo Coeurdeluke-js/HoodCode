@@ -246,3 +246,262 @@
       font-size: 0.9rem;
     }
   }
+
+  /* Sección Nosotros */
+.nosotros {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 0; /* Eliminamos el padding horizontal */
+  background-color: #fafafa; /* Fondo claro para contraste */
+  color: #121322; /* Texto negro azulado */
+}
+
+.nosotros-content {
+  max-width: 40%; /* El texto ocupa el 40% del ancho */
+  margin-left: 5%; /* Margen izquierdo del texto */
+}
+
+.nosotros h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.nosotros p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.nosotros .cta-button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fafafa; /* Texto blanco */
+  background-color: #d8599b; /* Rosa intenso */
+  border: none;
+  border-radius: 20px; /* Bordes redondeados */
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.nosotros .cta-button:hover {
+  transform: translateY(-5px); /* Efecto de elevación */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+.nosotros-image {
+  max-width: 40%; /* La imagen ocupa el 40% del ancho */
+  margin-right: 5%; /* Margen derecho de la imagen */
+  margin-left: 10%; /* Espacio entre el texto y la imagen (igual al margen lateral) */
+}
+
+.nosotros-image img {
+  width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+  height: auto; /* Mantener la proporción de aspecto */
+  border-radius: 10px; /* Bordes ligeramente redondeados */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra ligera */
+}
+
+/* Diseño Responsivo */
+@media (max-width: 768px) {
+  .nosotros {
+    flex-direction: column; /* Apila el contenido verticalmente */
+    text-align: center; /* Centra el texto */
+  }
+
+  .nosotros-content {
+    max-width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
+    margin-left: 0; /* Elimina el margen izquierdo */
+    margin-bottom: 2rem; /* Espacio entre el texto y la imagen */
+  }
+
+  .nosotros-image {
+    margin-right: 0; /* Elimina el margen derecho */
+    margin-left: 0; /* Elimina el margen izquierdo */
+    margin-bottom: 2rem; /* Espacio entre la imagen y el botón */
+  }
+}
+
+/* Sección Servicios */
+.servicios {
+  padding: 4rem 2rem;
+  background-color: #fafafa; /* Fondo claro para contraste */
+  color: #121322; /* Texto negro azulado */
+  text-align: center;
+}
+
+.servicios-header h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.servicios-header p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.servicio-card {
+  min-width: 25%; /* Cuatro tarjetas visibles en pantallas grandes */
+  box-sizing: border-box;
+  padding: 1rem;
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column; /* Alinea elementos verticalmente */
+  justify-content: space-between; /* Distribuye espacio entre elementos */
+  min-height: 200px; /* Altura mínima uniforme para todas las tarjetas */
+}
+
+.servicio-card .content {
+  flex-grow: 1; /* Hace que el contenido ocupe el espacio restante */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Asegura que el botón esté siempre abajo */
+}
+
+.servicio-card i {
+  font-size: 2.5rem;
+  color: #d8599b;
+  margin-bottom: 1rem;
+}
+
+.servicio-card h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.servicio-card p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  flex-grow: 1; /* Expande el texto para ocupar el espacio disponible */
+}
+
+.servicio-card .cta-button {
+  align-self: center; /* Centra el botón horizontalmente */
+  margin-top: auto; /* Empuja el botón hacia abajo */
+  padding: 0.7rem 1.5rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #fafafa;
+  background-color: #d8599b;
+  border: none;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.servicio-card .cta-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsividad */
+@media (max-width: 1023px) {
+  .servicio-card {
+    min-width: 33.33%; /* Tres tarjetas visibles en pantallas medianas */
+  }
+}
+
+@media (max-width: 767px) {
+  .servicio-card {
+    min-width: 50%; /* Dos tarjetas visibles en pantallas pequeñas */
+  }
+}
+
+@media (max-width: 479px) {
+  .servicio-card {
+    min-width: 100%; /* Una tarjeta visible en pantallas muy pequeñas */
+  }
+}
+/* Botones de Navegación */
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 10;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.carousel-button:hover {
+  background-color: #d8599b; /* Rosa suave */
+  transform: scale(1.1); /* Agrandamiento sutil */
+}
+
+.carousel-button.prev {
+  left: 1rem;
+}
+
+.carousel-button.next {
+  right: 1rem;
+}
+
+/* Indicadores de Posición */
+.carousel-indicators {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+}
+
+.indicator {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.indicator i {
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.5);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.indicator.active i {
+  color: #d8599b;
+  transform: scale(1.2);
+}
+
+.indicator:hover i {
+  color: #d8599b;
+  transform: scale(1.2);
+}
