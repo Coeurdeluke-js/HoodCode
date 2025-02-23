@@ -10,10 +10,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Función para mover el carrusel a una tarjeta específica
   const moveToCard = (index) => {
-    if (index < 0 || index >= totalCards) return; // Evitar índices fuera de rango
+    if (index < 0) {
+      index = totalCards - 1; // Vuelve al final si es menor que 0
+    } else if (index >= totalCards) {
+      index = 0; // Vuelve al principio si es mayor que el total
+    }
+
     currentIndex = index;
-    const offset = -currentIndex * 100; // Calcula el desplazamiento en porcentaje
-    carouselTrack.style.transform = `translateX(${offset}%)`;
+    const cardWidth = carouselCards[0].offsetWidth; // Ancho de una tarjeta
+    const offset = -currentIndex * cardWidth; // Desplazamiento en píxeles
+    carouselTrack.style.transform = `translateX(${offset}px)`;
 
     // Actualizar indicadores
     updateIndicators();
@@ -40,15 +46,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Navegación al hacer clic en los botones
   prevButton.addEventListener('click', () => {
-    if (currentIndex > 0) {
-      moveToCard(currentIndex - 1);
-    }
+    moveToCard(currentIndex - 1);
   });
 
   nextButton.addEventListener('click', () => {
-    if (currentIndex < totalCards - 1) {
-      moveToCard(currentIndex + 1);
-    }
+    moveToCard(currentIndex + 1);
   });
 
   // Navegación al hacer clic en los indicadores
