@@ -7,8 +7,8 @@
 
 body {
   font-family: 'Space Grotesk', sans-serif;
-  background-color: #fafafa; /* Fondo blanco para el contenido principal */
-  color: #121322; /* Texto negro azulado */
+  background-color: #fafafa;
+  color: #121322;
 }
 
 /* Barra de Navegación */
@@ -17,10 +17,10 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: #121322; /* Negro azulado profundo */
+  background-color: #121322;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   position: relative;
-  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+  z-index: 1000;
 }
 
 .navbar::after {
@@ -37,28 +37,27 @@ body {
 .brand {
   display: flex;
   align-items: center;
-  gap: 0.5rem; /* Espacio entre el logo y el texto */
+  gap: 0.5rem;
 }
 
 .brand img {
-  height: 50px; /* Ajusta el tamaño según sea necesario */
+  height: 50px;
   width: auto;
 }
 
 .brand h1 {
-  font-family: 'Space Grotesk', sans-serif;
   font-size: 1.8rem;
   margin: 0;
 }
 
 .hood {
-  color: #d8599b; /* Rosa intenso */
+  color: #d8599b;
   font-weight: bold;
 }
 
 .code {
-  color: #f09294; /* Rosa claro/salmón */
-  font-weight: 300; /* Peso ligero */
+  color: #f09294;
+  font-weight: 300;
 }
 
 .nav-links ul {
@@ -72,16 +71,16 @@ body {
 
 .nav-links a {
   text-decoration: none;
-  color: #f09294; /* Rosa claro/salmón */
+  color: #f09294;
   font-weight: 600;
   transition: color 0.3s ease;
   display: flex;
   align-items: center;
-  gap: 0.5rem; /* Espacio entre el ícono y el texto */
+  gap: 0.5rem;
 }
 
 .nav-links a:hover {
-  color: #ffffff; /* Blanco al pasar el mouse */
+  color: #ffffff;
 }
 
 .nav-links i {
@@ -93,9 +92,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Altura completa de la pantalla */
-  background: url('hero/hero.jpg') no-repeat center center/cover; /* Imagen de fondo */
-  color: #fafafa; /* Texto blanco */
+  height: 100vh;
+  background: url('hero/hero.jpg') no-repeat center center/cover;
+  color: #fafafa;
   text-align: center;
   overflow: hidden;
   position: relative;
@@ -108,7 +107,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.4); /* Sombra ligera para mejorar legibilidad */
+  background: rgba(0, 0, 0, 0.4);
   z-index: 1;
 }
 
@@ -118,25 +117,25 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Color negro con transparencia */
+  background: rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
 
 .hero-content {
   position: relative;
-  z-index: 2; /* Asegura que el contenido esté sobre el fondo */
-  max-width: 600px; /* Ancho máximo para centrar el contenido */
-  text-align: left; /* Alineación a la izquierda */
-  margin-left: 2rem; /* Margen izquierdo */
+  z-index: 2;
+  max-width: 1200px;
+  padding: 0 2rem;
+  text-align: left;
+  margin: 0 auto;
 }
 
 .hero h1 {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 3rem;
+  font-size:  6rem;
   font-weight: bold;
   margin-bottom: 1rem;
   line-height: 1.2;
-  color: #fafafa; /* Texto blanco */
+  color: #fafafa;
 }
 
 .hero p {
@@ -144,7 +143,7 @@ body {
   font-size: 1.2rem;
   margin-bottom: 2rem;
   line-height: 1.6;
-  color: #fafafa; /* Texto blanco */
+  color: #fafafa;
 }
 
 .cta-button {
@@ -152,17 +151,17 @@ body {
   font-family: 'Space Grotesk', sans-serif;
   font-size: 1rem;
   font-weight: bold;
-  color: #fafafa; /* Texto blanco */
-  background-color: #d8599b; /* Rosa intenso */
+  color: #fafafa;
+  background-color: #d8599b;
   border: none;
-  border-radius: 20px; /* Bordes más redondeados */
+  border-radius: 20px;
   text-decoration: none;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .cta-button:hover {
-  transform: translateY(-5px); /* Efecto de elevación */
+  transform: translateY(-5px);
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
 }
 
@@ -171,19 +170,19 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 4rem 0; /* Eliminamos el padding horizontal */
-  background-color: #fafafa; /* Fondo claro para contraste */
-  color: #121322; /* Texto negro azulado */
+  padding: 4rem 2rem;
+  background-color: #fafafa;
+  color: #121322;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .nosotros-content {
-  max-width: 40%; /* El texto ocupa el 40% del ancho */
-  margin-left: 5%; /* Margen izquierdo del texto */
-  text-align: left; /* Alineación a la izquierda */
+  max-width: 50%;
+  text-align: left;
 }
 
 .nosotros h2 {
-  font-family: 'Space Grotesk', sans-serif;
   font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 1.5rem;
@@ -203,49 +202,47 @@ body {
   font-family: 'Space Grotesk', sans-serif;
   font-size: 1rem;
   font-weight: bold;
-  color: #fafafa; /* Texto blanco */
-  background-color: #d8599b; /* Rosa intenso */
+  color: #fafafa;
+  background-color: #d8599b;
   border: none;
-  border-radius: 20px; /* Bordes redondeados */
+  border-radius: 20px;
   text-decoration: none;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .nosotros .cta-button:hover {
-  transform: translateY(-5px); /* Efecto de elevación */
+  transform: translateY(-5px);
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
 }
 
 .nosotros-image {
-  max-width: 40%; /* La imagen ocupa el 40% del ancho */
-  margin-right: 5%; /* Margen derecho de la imagen */
-  margin-left: 10%; /* Espacio entre el texto y la imagen (igual al margen lateral) */
+  max-width: 40%;
 }
 
 .nosotros-image img {
-  width: 100%; /* La imagen ocupa todo el ancho del contenedor */
-  height: auto; /* Mantener la proporción de aspecto */
-  border-radius: 10px; /* Bordes ligeramente redondeados */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra ligera */
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 /* Sección Servicios */
 .servicios {
   padding: 4rem 2rem;
-  background-color: #fafafa; /* Fondo claro para contraste */
-  color: #121322; /* Texto negro azulado */
+  background-color: #fafafa;
+  color: #121322;
   text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .servicios-header {
-  text-align: left; /* Alineación a la izquierda */
-  margin-left: 2rem; /* Margen izquierdo */
-  margin-right: 2rem; /* Margen derecho */
+  text-align: left;
+  margin-bottom: 2rem;
 }
 
 .servicios-header h2 {
-  font-family: 'Space Grotesk', sans-serif;
   font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 1.5rem;
@@ -263,7 +260,6 @@ body {
   position: relative;
   overflow: hidden;
   width: 100%;
-  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -273,25 +269,25 @@ body {
 }
 
 .servicio-card {
-  min-width: 25%; /* Cuatro tarjetas visibles en pantallas grandes */
+  min-width: 25%;
   box-sizing: border-box;
-  padding: 1rem;
+  padding: 1.5rem;
   text-align: center;
   background-color: #ffffff;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
-  flex-direction: column; /* Alinea elementos verticalmente */
-  justify-content: space-between; /* Distribuye espacio entre elementos */
-  min-height: 200px; /* Altura mínima uniforme para todas las tarjetas */
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 280px; /* Alto mínimo aumentado */
 }
 
 .servicio-card .content {
-  flex-grow: 1; /* Hace que el contenido ocupe el espacio restante */
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Asegura que el botón esté siempre abajo */
+  justify-content: space-between;
 }
 
 .servicio-card i {
@@ -301,7 +297,6 @@ body {
 }
 
 .servicio-card h3 {
-  font-family: 'Space Grotesk', sans-serif;
   font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
@@ -311,12 +306,13 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-size: 1rem;
   line-height: 1.6;
-  flex-grow: 1; /* Expande el texto para ocupar el espacio disponible */
+  flex-grow: 1;
+  margin-bottom: 1.5rem; /* Margen inferior aumentado */
 }
 
 .servicio-card .cta-button {
-  align-self: center; /* Centra el botón horizontalmente */
-  margin-top: auto; /* Empuja el botón hacia abajo */
+  align-self: center;
+  margin-top: 1.5rem; /* Margen superior aumentado */
   padding: 0.7rem 1.5rem;
   font-family: 'Space Grotesk', sans-serif;
   font-size: 0.9rem;
@@ -345,9 +341,9 @@ body {
   font-size: 1.5rem;
   cursor: pointer;
   z-index: 10;
-  width: 50px; /* Tamaño del botón */
-  height: 50px; /* Tamaño del botón */
-  border-radius: 50%; /* Botón circular */
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -363,8 +359,8 @@ body {
 }
 
 .carousel-button:active {
-  background-color: #d8599b; /* Cambia el color al hacer click */
-  transform: translateY(-50%) scale(0.9); /* Efecto de reducción */
+  background-color: #d8599b;
+  transform: translateY(-50%) scale(0.9);
 }
 
 .carousel-indicators {
@@ -395,4 +391,98 @@ body {
 .indicator:hover i {
   color: #d8599b;
   transform: scale(1.2);
+}
+
+/* Sección Portafolio */
+.portafolio {
+  padding: 4rem 2rem; /* Márgenes consistentes con otras secciones */
+  text-align: center;
+  background-color: #f9f9f9;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.portafolio-header {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.portafolio-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.portafolio-header p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.portafolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.proyecto-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.proyecto-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.proyecto-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.proyecto-info {
+  padding: 1.5rem;
+  text-align: left;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.proyecto-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.proyecto-info p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.proyecto-info .cta-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  font-size: 1rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  align-self: flex-start;
+  margin-top: auto;
+  cursor: pointer;
+}
+
+.proyecto-info .cta-button:hover {
+  background-color: #d8599b;
+  transform: translateY(-2px);
 }
