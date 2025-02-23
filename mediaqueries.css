@@ -8,18 +8,18 @@
   }
 
   .brand {
-    order: 2; /* Coloca el logo y el texto en el centro */
-    margin: 1rem 0; /* Espacio entre los botones y el logo */
+    order: 2;
+    margin: 1rem 0;
     justify-content: center;
   }
 
   .nav-links {
-    order: 3; /* Coloca los botones debajo del logo */
+    order: 3;
     margin-top: 1rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1rem; /* Espacio entre los botones */
+    gap: 1rem;
   }
 
   .nav-links ul {
@@ -30,116 +30,292 @@
   }
 
   .nav-links li {
-    margin: 0; /* Elimina el margen adicional */
+    margin: 0;
   }
 
   /* Sección Hero */
   .hero-content {
-    text-align: left; /* Alinea el texto a la izquierda */
-    margin: 0 auto; /* Centra el contenedor */
-    padding: 0 1rem; /* Añade márgenes laterales */
+    text-align: left;
+    margin: 0 auto;
+    padding: 0 1rem;
   }
 
   .hero h1 {
-    font-size: 2.4rem; /* Tamaño de fuente más pequeño para móviles */
-    text-align: left; /* Alinea el título a la izquierda */
-    padding: 0 1rem; /* Márgenes más pequeños en móviles */
+    font-size: 2.4rem;
+    text-align: left;
+    padding: 0 1rem;
   }
 
   .hero p {
-    font-size: 1rem; /* Tamaño de fuente más pequeño para móviles */
-    margin-bottom: 1.5rem; /* Aumenta el margen inferior del párrafo */
-    text-align: left; /* Alinea el texto a la izquierda */
-    padding: 2rem 1rem; /* Márgenes más pequeños en móviles */
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    text-align: left;
+    padding: 0 1rem;
   }
 
   .hero .cta-button {
-    display: block; /* El botón se ajusta al contenido */
-    margin: 1.5rem auto 0; /* Margen superior de 1.5rem y centrado horizontalmente */
-    padding: 0.8rem 1rem; /* Padding más pequeño para móviles */
-    font-size: 0.9rem; /* Tamaño de fuente más pequeño para móviles */
-    min-width: 240px; /* Ancho mínimo para evitar que el texto se quiebre */
-    text-align: center; /* Centra el texto dentro del botón */
-    white-space: nowrap; /* Evita que el texto se divida en dos líneas */
+    display: block;
+    margin: 0.5rem auto 0;
+    padding: 0.8rem 1rem;
+    font-size: 0.9rem;
+    min-width: 240px;
+    text-align: center;
+    white-space: nowrap;
   }
 
   /* Sección Nosotros */
   .nosotros {
-    flex-direction: column; /* Apila el contenido verticalmente */
-    text-align: left; /* Alinea el texto a la izquierda */
-    padding: 2rem 1rem; /* Márgenes más pequeños en móviles */
+    flex-direction: column;
+    text-align: left;
+    padding: 2rem 1rem;
   }
 
   .nosotros-content {
-    max-width: 100%; /* Ocupa todo el ancho en móviles */
-    margin-bottom: 1.5rem; /* Reduce el espacio entre el texto y la imagen */
-    text-align: left; /* Alinea el texto a la izquierda */
+    max-width: 100%;
+    margin-bottom: 1.5rem;
+    text-align: left;
   }
 
   .nosotros-content h2 {
-    margin-bottom: 1rem; /* Reduce el espacio entre el título y el párrafo */
+    margin-bottom: 1rem;
   }
 
   .nosotros-content p {
-    margin-bottom: 1.5rem; /* Aumenta el margen inferior del párrafo */
-    font-size: 1rem; /* Tamaño de fuente más pequeño para móviles */
-    margin-right: 1rem; /* Margen derecho */
-
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    margin-right: 1rem;
   }
 
   .nosotros-image {
-    max-width: 100%; /* La imagen ocupa todo el ancho en móviles */
-    margin: 0 auto 1.5rem; /* Reduce el margen inferior de la imagen */
-    text-align: center; /* Centra la imagen horizontalmente */
-    order: 1; /* Posiciona la imagen debajo del <p> y arriba del botón */
+    max-width: 100%;
+    margin: 0 auto 1.5rem;
+    text-align: center;
+    order: 1;
   }
 
   .nosotros-image img {
-    width: 90%; /* Asegura que la imagen ocupe el 90% del ancho disponible */
-    height: auto; /* Mantener la proporción de aspecto */
-    display: block; /* Hace que la imagen sea un bloque para centrarla */
-    margin: 0 auto; /* Centra la imagen horizontalmente */
+    width: 90%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
   }
+
   .nosotros .cta-button {
-    display: block; /* Hace que el botón ocupe todo el ancho disponible */
-    margin: 1.5rem auto 0; /* Margen superior de 1.5rem y centrado horizontalmente */
-    padding: 0.8rem 2rem; /* Padding más pequeño para móviles */
-    font-size: 0.9rem; /* Tamaño de fuente más pequeño para móviles */
-    width: auto; /* El ancho se ajusta al contenido */
-    max-width: 240px; /* Ancho máximo para evitar que sea demasiado grande */
-    text-align: center; /* Centra el texto dentro del botón */
+    display: block;
+    margin: 1.5rem auto 0;
+    padding: 0.8rem 2rem;
+    font-size: 0.9rem;
+    width: auto;
+    max-width: 240px;
+    text-align: center;
   }
 
   /* Sección Servicios */
   .servicios {
-    padding: 2rem 1rem; /* Márgenes más pequeños en móviles */
-    text-align: left; /* Alinea el texto a la izquierda */
+    padding: 2rem 1rem;
+    text-align: left;
   }
 
   .servicios-header {
-    padding: 0; /* Eliminar márgenes internos en móviles */
-    margin-left: 1rem; /* Margen izquierdo */
-    margin-right: 1rem; /* Margen derecho */
-    text-align: left; /* Alinea el texto a la izquierda */
+    padding: 0;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    text-align: left;
   }
 
   .servicios-header h2 {
-    margin-bottom: 1rem; /* Reduce el espacio entre el título y el párrafo */
+    margin-bottom: 1rem;
   }
 
   .servicios-header p {
-    margin-bottom: 1.5rem; /* Aumenta el margen inferior del párrafo */
-    font-size: 1rem; /* Tamaño de fuente más pequeño para móviles */
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+  }
+
+  /* Carrusel */
+  .carousel-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
   }
 
   .servicio-card {
-    min-width: 50%; /* Dos tarjetas visibles en pantallas pequeñas */
-    text-align: left; /* Alinea el texto a la izquierda */
+    min-width: 100%; /* Muestra una tarjeta a la vez en móviles */
+    box-sizing: border-box;
+    padding: 1rem;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 200px;
+  }
+
+  .servicio-card .content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el contenido horizontalmente */
+    justify-content: center; /* Centra el contenido verticalmente */
+  }
+
+  .servicio-card i {
+    font-size: 2.5rem;
+    color: #d8599b;
+    margin-bottom: 1rem;
+  }
+
+  .servicio-card h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    text-align: center; /* Centra el título */
+  }
+
+  .servicio-card p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    flex-grow: 1;
+    text-align: center; /* Centra el texto */
+    max-width: 70%;
+    margin-bottom: 1rem;
+  }
+
+  .servicio-card .cta-button {
+    align-self: center;
+    margin-top: auto;
+    padding: 0.7rem 1.5rem;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #fafafa;
+    background-color: #d8599b;
+    border: none;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+
+  .servicio-card .cta-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Botones de Navegación */
+  .carousel-button {
+    position: absolute;
+    top: 50%; /* Centra verticalmente */
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  .carousel-button.prev {
+    left: 0.5rem;
+  }
+
+  .carousel-button.next {
+    right: 0.5rem;
+  }
+
+  .carousel-button:hover {
+    background-color: #d8599b;
+    transform: translateY(-50%) scale(1.1);
+  }
+
+  @media (max-width: 768px) {
+    .carousel-container {
+      position: relative; /* Asegura que los indicadores se posicionen correctamente */
+      overflow: hidden;
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-bottom: 3rem; /* Espacio para los indicadores */
+    }
+  
+    .carousel-indicators {
+      position: absolute;
+      bottom: 1rem; /* Ajusta este valor para moverlos debajo del botón */
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 0.5rem;
+    }
+  
+    .indicator {
+      cursor: pointer;
+      width: 10px;
+      height: 10px;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 50%;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+  
+    .indicator.active {
+      background-color: #d8599b;
+      transform: scale(1.2);
+    }
+  
+    .carousel-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      z-index: 10;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+  
+    .carousel-button.prev {
+      left: 0.5rem;
+    }
+  
+    .carousel-button.next {
+      right: 0.5rem;
+    }
+  
+    .carousel-button:hover {
+      background-color: #d8599b;
+      transform: translateY(-50%) scale(1.1);
+    }
   }
 
   /* Títulos alineados a la izquierda en móviles */
   h1, h2, h3 {
-    text-align: left; /* Alinea todos los títulos a la izquierda */
+    text-align: left;
   }
 }
 
