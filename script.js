@@ -1,63 +1,64 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', () => {
   const carouselTrack = document.querySelector('.carousel-track');
   const carouselCards = document.querySelectorAll('.servicio-card');
   const prevButton = document.querySelector('.carousel-button.prev');
   const nextButton = document.querySelector('.carousel-button.next');
-  const cardWidth = carouselCards[0].offsetWidth;
+  const indicators = document.querySelectorAll('.indicator');
+  const totalCards = carouselCards.length;
+  const visibleIndicators = 6; // Mostrar solo 6 indicadores
   let currentIndex = 0;
 
-  // Clona la primera y última tarjeta para crear el efecto de bucle infinito
-  const cloneFirst = carouselCards[0].cloneNode(true);
-  const cloneLast = carouselCards[carouselCards.length - 1].cloneNode(true);
+  // Función para mover el carrusel a una tarjeta específica
+  const moveToCard = (index) => {
+    if (index < 0 || index >= totalCards) return; // Evitar índices fuera de rango
+    currentIndex = index;
+    const offset = -currentIndex * 100; // Calcula el desplazamiento en porcentaje
+    carouselTrack.style.transform = `translateX(${offset}%)`;
 
-  // Añade los clones al carrusel
-  carouselTrack.appendChild(cloneFirst); // Clona la primera tarjeta y la añade al final
-  carouselTrack.insertBefore(cloneLast, carouselTrack.firstChild); // Clona la última tarjeta y la añade al principio
+    // Actualizar indicadores
+    updateIndicators();
+  };
 
-  // Ajusta la posición inicial del carrusel
-  carouselTrack.style.transform = `translateX(${-cardWidth}px)`;
+  // Función para actualizar los indicadores
+  const updateIndicators = () => {
+    const start = Math.floor(currentIndex / visibleIndicators) * visibleIndicators;
+    const end = start + visibleIndicators;
 
-  // Función para mover el carrusel
-  function moveCarousel(index, animate = true) {
-    if (animate) {
-      carouselTrack.style.transition = 'transform 0.5s ease-in-out';
-    } else {
-      carouselTrack.style.transition = 'none';
-    }
-    const offset = -index * cardWidth;
-    carouselTrack.style.transform = `translateX(${offset}px)`;
-  }
+    indicators.forEach((indicator, i) => {
+      const indicatorIndex = start + i;
+      indicator.setAttribute('data-index', indicatorIndex);
+      indicator.classList.toggle('active', indicatorIndex === currentIndex);
 
-  // Función para manejar el bucle infinito
-  function handleLoop() {
-    // Si estamos en el clon de la última tarjeta, saltamos a la primera tarjeta real sin animación
-    if (currentIndex >= carouselCards.length) {
-      currentIndex = 0;
-      moveCarousel(currentIndex + 1, false); // +1 para compensar el clon al principio
-    }
-    // Si estamos en el clon de la primera tarjeta, saltamos a la última tarjeta real sin animación
-    else if (currentIndex < 0) {
-      currentIndex = carouselCards.length - 1;
-      moveCarousel(currentIndex + 1, false); // +1 para compensar el clon al principio
-    }
-  }
+      // Ocultar indicadores fuera del rango actual
+      if (indicatorIndex >= totalCards) {
+        indicator.style.display = 'none';
+      } else {
+        indicator.style.display = 'block';
+      }
+    });
+  };
 
-  // Evento para el botón "Anterior"
+  // Navegación al hacer clic en los botones
   prevButton.addEventListener('click', () => {
-    currentIndex--;
-    moveCarousel(currentIndex + 1); // +1 para compensar el clon al principio
-    handleLoop();
+    if (currentIndex > 0) {
+      moveToCard(currentIndex - 1);
+    }
   });
 
-  // Evento para el botón "Siguiente"
   nextButton.addEventListener('click', () => {
-    currentIndex++;
-    moveCarousel(currentIndex + 1); // +1 para compensar el clon al principio
-    handleLoop();
+    if (currentIndex < totalCards - 1) {
+      moveToCard(currentIndex + 1);
+    }
   });
 
-  // Evento para reiniciar la transición al finalizar
-  carouselTrack.addEventListener('transitionend', () => {
-    handleLoop();
+  // Navegación al hacer clic en los indicadores
+  indicators.forEach((indicator) => {
+    indicator.addEventListener('click', () => {
+      const index = parseInt(indicator.getAttribute('data-index'), 10);
+      moveToCard(index);
+    });
   });
+
+  // Inicializar el carrusel
+  moveToCard(0);
 });
