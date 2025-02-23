@@ -319,8 +319,15 @@
   }
 }
 
-/* Media Queries para pantallas muy pequeñas (menores a 479px) */
 @media (max-width: 479px) {
+  /* Ajustes adicionales para pantallas muy pequeñas */
+  .portafolio-grid {
+    grid-template-columns: 1fr; /* Una columna en pantallas muy pequeñas */
+  }
+
+  .proyecto-card img {
+    height: 200px; /* Reduce la altura de la imagen en pantallas muy pequeñas */
+  }
   .servicio-card {
     min-width: 100%; /* Una tarjeta visible en pantallas muy pequeñas */
   }
