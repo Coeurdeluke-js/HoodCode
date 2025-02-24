@@ -521,3 +521,70 @@ body {
   background-color: #d8599b;
   transform: translateY(-2px);
 }
+
+/* Estilos para el texto destacado */
+.highlighted-text {
+  position: relative; /* Para posicionar los pseudo-elementos */
+  display: inline-block; /* Para que el ancho se ajuste al texto */
+  color: #fafafa; /* Color del texto */
+  z-index: 2; /* Asegura que el texto esté por encima del marcador */
+}
+
+/* Línea vertical (izquierda) */
+.highlighted-text::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -5px; /* Línea vertical a la izquierda del texto */
+  width: 3px; /* Ancho de la línea vertical */
+  height: 0; /* Altura inicial de la línea vertical */
+  background-color: #d8599b; /* Color del marcador */
+  animation: drawLine 3s 1s ease-in-out forwards, collapse 1s 7s ease-in-out forwards; /* Animaciones */
+  z-index: 1; /* Asegura que la línea esté detrás del texto */
+  transform-origin: center; /* El colapso ocurre desde el centro */
+}
+
+/* Rectángulo pintado */
+.highlighted-text::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -5px; /* Inicio del marcador */
+  width: 0; /* Inicialmente sin ancho */
+  height: 100%; /* Altura del marcador */
+  background-color: #d8599b; /* Color del marcador */
+  opacity: 0.3; /* Transparencia para simular el marcador */
+  animation: fillText 2s 4s ease-in-out forwards, collapse 1s 7s ease-in-out forwards; /* Animaciones */
+  z-index: 1; /* Asegura que el marcador esté detrás del texto */
+  transform-origin: center; /* El colapso ocurre desde el centro */
+}
+
+/* Animación de la línea vertical */
+@keyframes drawLine {
+  0% {
+    height: 0; /* Línea comienza sin altura */
+  }
+  100% {
+    height: 100%; /* Línea alcanza la altura completa */
+  }
+}
+
+/* Animación para "pintar" el texto */
+@keyframes fillText {
+  0% {
+    width: 0; /* Comienza sin ancho */
+  }
+  100% {
+    width: calc(100% + 10px); /* Cubre todo el ancho del texto + espacio para la línea */
+  }
+}
+
+/* Animación para colapsar desde el centro */
+@keyframes collapse {
+  0% {
+    transform: scaleY(1); /* Altura completa */
+  }
+  100% {
+    transform: scaleY(0); /* Colapsa hacia el centro */
+  }
+}
