@@ -139,26 +139,29 @@
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    padding-bottom: 4rem; /* Espacio para los indicadores */
   }
 
   .carousel-track {
     display: flex;
     transition: transform 0.5s ease-in-out;
+    gap: 1rem; /* Separación entre tarjetas */
   }
 
   .servicio-card {
-    min-width: 100%; /* Muestra una tarjeta a la vez en móviles */
+    min-width: 90%; /* Una tarjeta visible en móviles */
     box-sizing: border-box;
     padding: 1rem;
     text-align: center;
-    background-color: #ffffff;
+    background-color: #1e1e2f; /* Fondo oscuro para las tarjetas */
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     min-height: 200px;
+    margin: 0 1rem; /* Margen para evitar que se pegue a los bordes */
   }
 
   .servicio-card .content {
@@ -181,6 +184,7 @@
     font-weight: bold;
     margin-bottom: 0.5rem;
     text-align: center; /* Centra el título */
+    color: #fafafa; /* Texto claro */
   }
 
   .servicio-card p {
@@ -191,6 +195,7 @@
     text-align: center; /* Centra el texto */
     max-width: 70%;
     margin-bottom: 1rem;
+    color: #fafafa; /* Texto claro */
   }
 
   .servicio-card .cta-button {
@@ -247,70 +252,33 @@
     transform: translateY(-50%) scale(1.1);
   }
 
-  @media (max-width: 768px) {
-    .carousel-container {
-      position: relative; /* Asegura que los indicadores se posicionen correctamente */
-      overflow: hidden;
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding-bottom: 3rem; /* Espacio para los indicadores */
-    }
-  
-    .carousel-indicators {
-      position: absolute;
-      bottom: 1rem; /* Ajusta este valor para moverlos debajo del botón */
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      gap: 0.5rem;
-    }
-  
-    .indicator {
-      cursor: pointer;
-      width: 10px;
-      height: 10px;
-      background-color: rgba(0, 0, 0, 0.5);
-      border-radius: 50%;
-      transition: background-color 0.3s ease, transform 0.3s ease;
-    }
-  
-    .indicator.active {
-      background-color: #d8599b;
-      transform: scale(1.2);
-    }
-  
-    .carousel-button {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background-color: rgba(0, 0, 0, 0.5);
-      color: white;
-      border: none;
-      font-size: 1.5rem;
-      cursor: pointer;
-      z-index: 10;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: background-color 0.3s ease, transform 0.3s ease;
-    }
-  
-    .carousel-button.prev {
-      left: 0.5rem;
-    }
-  
-    .carousel-button.next {
-      right: 0.5rem;
-    }
-  
-    .carousel-button:hover {
-      background-color: #d8599b;
-      transform: translateY(-50%) scale(1.1);
-    }
+  /* Indicadores del Carrusel */
+  .carousel-indicators {
+    position: absolute;
+    bottom: 1rem; /* Ajusta este valor para moverlos debajo del botón */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .indicator {
+    cursor: pointer;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.5); /* Indicadores claros */
+    border-radius: 50%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  .indicator.active {
+    background-color: #d8599b;
+    transform: scale(1.2);
+  }
+
+  .indicator:hover {
+    background-color: #d8599b;
+    transform: scale(1.2);
   }
 
   /* Títulos alineados a la izquierda en móviles */
@@ -328,7 +296,8 @@
   .proyecto-card img {
     height: 200px; /* Reduce la altura de la imagen en pantallas muy pequeñas */
   }
+
   .servicio-card {
-    min-width: 100%; /* Una tarjeta visible en pantallas muy pequeñas */
+    min-width: 90%; /* Una tarjeta visible en pantallas muy pequeñas */
   }
 }
