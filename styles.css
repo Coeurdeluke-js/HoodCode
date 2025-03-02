@@ -588,3 +588,415 @@ body {
     transform: scaleY(0); /* Colapsa hacia el centro */
   }
 }
+
+/* En styles.css */
+.hero-proceso {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Altura completa de la ventana */
+  overflow: hidden;
+  background-color: #121322; /* Fondo de respaldo por si la imagen no carga */
+}
+
+.hero-proceso::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(18, 19, 34, 0.6); /* Overlay oscuro para mejorar la legibilidad del texto */
+  z-index: 1;
+}
+
+.hero-proceso .hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Asegura que la imagen cubra todo el espacio sin distorsionarse */
+  z-index: 0;
+}
+
+.hero-proceso .hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #fafafa; /* Texto en blanco para contrastar con el fondo */
+  max-width: 800px;
+  padding: 0 2rem;
+}
+
+.hero-proceso h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.hero-proceso p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+/* Estilos para la sección de Beneficios */
+.beneficios {
+  padding: 4rem 2rem;
+  background-color: #fafafa;
+  text-align: center;
+}
+
+.beneficios h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  color: #121322;
+}
+
+.beneficios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.beneficio-card {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.beneficio-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.beneficio-card i {
+  font-size: 2.5rem;
+  color: #d8599b;
+  margin-bottom: 1rem;
+}
+
+.beneficio-card h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.beneficio-card p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Estilos para la sección de Casos de Uso */
+.casos-uso {
+  padding: 4rem 2rem;
+  background-color: #fafafa;
+  text-align: center;
+}
+
+.casos-uso h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  color: #121322;
+}
+
+.casos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.caso-card {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.caso-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.caso-card h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.caso-card p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+.caso-card i {
+  font-size: 2.5rem;
+  color: #d8599b;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+/* Estilos para la sección de Tecnologías */
+.tecnologias {
+  padding: 4rem 2rem;
+  background-color: #fafafa;
+  text-align: center;
+}
+
+.tecnologias h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  color: #121322;
+}
+
+.tecnologias ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+}
+
+.tecnologias li {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+.tecnologias-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.tecnologia-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.tecnologia-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.tecnologia-card img {
+  width: 100%; /* Ocupa el ancho completo de la tarjeta */
+  aspect-ratio: 1 / 1; /* Mantiene la relación de aspecto 1:1 */
+  object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsionarse */
+}
+
+.tecnologia-info {
+  padding: 1.5rem;
+  text-align: left;
+  flex-grow: 1; /* Asegura que el contenido de la tarjeta ocupe el espacio restante */
+}
+
+.tecnologia-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #121322;
+}
+
+.tecnologia-info p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Estilos para la sección de Testimonios */
+.testimonios {
+  padding: 4rem 2rem;
+  background-color: #fafafa;
+  text-align: center;
+}
+
+.testimonios h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  color: #121322;
+}
+
+.testimonios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.testimonio-card {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonio-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.testimonio-card p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.testimonio-card .autor {
+  font-style: italic;
+  margin-top: 1rem;
+  color: #555;
+}
+
+/* Estilos para la sección de Preguntas Frecuentes */
+.faq {
+  padding: 4rem 2rem;
+  background-color: #fafafa;
+  text-align: center;
+}
+
+.faq h2 {
+  font-family: 'Space Grotesk', sans-serif; /* Usamos Space Grotesk para el título */
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  color: #121322;
+}
+
+.faq-accordion {
+  max-width: 800px;
+  margin: 2rem auto;
+}
+
+.faq-item {
+  border-bottom: 1px solid #ddd;
+}
+
+.faq-question {
+  background-color: #fafafa;
+  color: #121322;
+  cursor: pointer;
+  padding: 1.5rem;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  font-family: 'Montserrat', sans-serif; /* Usamos Montserrat para las preguntas */
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.faq-question:hover {
+  background-color: #f0f0f0;
+}
+
+.faq-answer {
+  padding: 0 1.5rem;
+  background-color: #ffffff;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  font-family: 'Montserrat', sans-serif; /* Usamos Montserrat para las respuestas */
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Estilos para la sección de Contacto */
+.contacto {
+  padding: 4rem 2rem;
+  background-color: #fafafa;
+  text-align: center;
+}
+
+.contacto h2 {
+  font-family: 'Space Grotesk', sans-serif; /* Usamos Space Grotesk para el título */
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  color: #121322;
+}
+
+.contacto p {
+  font-family: 'Montserrat', sans-serif; /* Usamos Montserrat para el texto descriptivo */
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.contacto form {
+  max-width: 600px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.contacto input,
+.contacto textarea {
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: 'Montserrat', sans-serif; /* Usamos Montserrat para los campos del formulario */
+  font-size: 1rem;
+  color: #121322;
+}
+
+.contacto input::placeholder,
+.contacto textarea::placeholder {
+  font-family: 'Montserrat', sans-serif; /* Usamos Montserrat para los placeholders */
+  color: #999;
+}
+
+.contacto .cta-button {
+  background-color: #d8599b;
+  color: #fafafa;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-family: 'Space Grotesk', sans-serif; /* Usamos Space Grotesk para el botón */
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.contacto .cta-button:hover {
+  background-color: #8e3e66;
+  transform: translateY(-5px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
